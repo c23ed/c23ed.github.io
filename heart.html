@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+			.heart{
+				width: 100px;
+				height: 100px;
+				background-image:url(heart.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				position:relative;
+				display:inline-block;
+				transition: 1s;
+			} 
+
+			.heart:hover {
+				width: 200px;
+				height: 200px;
+				background-image:url(heart.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				position:relative;
+				display:inline-block;
+				transition: 1s;
+			}
+
+	</style>
+</head>
+<body>
+	<p>How Many Hearts Are There?</p>
+	<br>
+	<input id="input"></input><button id="enter">enter</button>
+	<br>
+
+ 	<script type="text/javascript">
+
+ 		var heartNumber = 6;
+
+ 		function makeHearts () {
+ 		var heart = document.createElement("div");
+ 		document.body.appendChild(heart);
+ 		heart.classList.add("heart");
+
+ 		heart.style.left = Math.random()*550 +"px";
+
+ 		heart.style.top = Math.random()*350 +"px";
+ 		};
+
+ 		for (var i=0; i<heartNumber; i=i+1){
+ 			makeHearts();
+ 		}
+
+ 		var heartNumber = 2;
+
+ 		function hiddenHearts () {
+ 		var heart = document.createElement("div");
+ 		document.body.appendChild(heart);
+ 		heart.classList.add("heart");
+
+ 		heart.style.left = 1000 + Math.random()*600 +"px";
+
+ 		heart.style.top = 1000 + Math.random()*400 +"px";
+ 		};
+
+ 		for (var i=0; i<heartNumber; i=i+1){
+ 			hiddenHearts();
+ 		}
+
+
+var input = document.getElementById("input");
+
+var button = document.getElementById("enter");
+button.addEventListener("click", function(){
+	console.log("hey Elize!")
+	if (input.value==8) {alert("good job!")}
+		else if (input.value!=7) {alert("incorrect!")}
+})
+
+ 	</script>
+	
+
+</body>
+</html>
