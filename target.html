@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+<head>
+
+	<style type="text/css">
+	body {
+		font-family: 'Shadows Into Light', cursive;
+		margin:0;
+		background-color: rgb(64,224,208);
+		font-color: black;
+	}
+
+	#target {
+		background-image: url(target.png);
+		background-size:contain;
+		width:100px;
+		height:100px;
+		position:absolute;
+		left:43%;
+	}
+
+	#ball {
+		background-image: url(ball.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+		height:25px;
+		width:25px;
+		position:absolute;
+		left:46.7%;
+		margin-top:445px;
+
+	}
+
+	#target:active {
+		background-image: url(target.png);
+		background-size:contain;
+		width:300px;
+		height:300px;
+		position:absolute;
+		left:36%;
+	    margin-top:5px;
+
+	}
+
+</style>
+</head>
+<body>
+
+<center><h1>Hit The Target with the Ball</h1></center>
+<center><h2>(Use Full Screen To Play)</h2></center>
+
+<div id="target"></div>
+<div id="ball"></div>
+
+<script type="text/javascript">
+ 	
+ 	var ball;
+    document.addEventListener("keydown", function moveall(x,y) {
+    	console.log('hi');
+    	document.getElementById("ball").style.top =  "100px";
+    })
+
+
+ 	</script>
+
+</scipt>
+
+
+</body>
+</html>
