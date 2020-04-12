@@ -14,35 +14,37 @@
 		font-color: black;
 	}
 
-	#target {
-		background-image: url(target.png);
+	#garage {
+		background-image: url(garage.png);
 		background-size:contain;
-		width:100px;
-		height:100px;
+		width:50px;
+		height:500px;
 		position:absolute;
-		left:43%;
+		background-repeat: no-repeat;
+		left:1100px;
+		top:400px;
 	}
 
-	#ball {
-		background-image: url(ball.png);
+	#car {
+		background-image: url(car.png);
 		background-size:contain;
 		background-repeat: no-repeat;
-		height:25px;
-		width:25px;
+		height:100px;
+		width:100px;
 		position:absolute;
-		left:46.7%;
-		margin-top:445px;
+		left: 105px;
+		top:302px;
 
 	}
 
-	#target:active {
-		background-image: url(target.png);
+	#garage:active {
+		background-image: url(garage.png);
 		background-size:contain;
-		width:300px;
-		height:300px;
+		width:200px;
+		height:650px;
 		position:absolute;
-		left:36%;
-	    margin-top:5px;
+		left:1000px;
+	    top:200px;
 
 	}
 
@@ -50,19 +52,26 @@
 </head>
 <body>
 
-<center><h1>Hit The Target with the Ball</h1></center>
+<center><h1>Bring the Car to the Garage</h1></center>
 <center><h2>(Use Full Screen To Play)</h2></center>
 
-<div id="target"></div>
-<div id="ball"></div>
+<div id="garage"></div>
+<div id="car"></div>
 
 <script type="text/javascript">
  	
- 	var ball;
-    document.addEventListener("keydown", function moveall(x,y) {
-    	console.log('hi');
-    	document.getElementById("ball").style.top =  "100px";
-    })
+ 	var car = document.getElementById("car");
+ 	var left = car.style.left;
+    left = "200px"
+    	document.addEventListener("keydown", function(x) {
+        if (x.keyCode == 39) {
+        		console.log("hey Elize!")
+            left=parseInt(left)+25+"px";};
+            car.style.left=left;
+            console.log(left);
+
+        });
+
 
 
  	</script>
