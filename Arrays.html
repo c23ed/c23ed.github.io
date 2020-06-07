@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<style type="text/css">
+
+		body {
+			font-color: blue;
+		}
+
+		#music {
+			background-image: url(music.png);
+			background-size: contain;
+			height: 650px;
+			width: 650px;
+			position: absolute;
+			left: 340px;
+		}
+
+		#song {
+			background-color: white;
+			height: 40px;
+			width: 150px;
+			position: absolute;
+			left: 563px;
+			top: 434.5px;
+			font-family: 'Nunito Sans', sans-serif;
+			font-color: black;
+			text-align: center;
+		}
+
+		#album {
+			background-image: url(album.png);
+			background-repeat:no-repeat;
+			background-size:contain;
+			position: absolute;
+			height: 160px;
+			width: 133px;
+			left: 572.5px;
+			top: 254.5px;
+
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+<h1>Click the screen to find out which Ed Sheeran song you should listen to:</h1>
+
+
+	<div id="music"></div>
+	<div id="song"></div>
+	<div id="album"></div>
+
+	<script type="text/javascript">
+		var song = document.getElementById('song');
+		var array = ["Perfect", "Photograph", "Shape of You", "Happier", "Galway Girl", "Castle on the Hill", "The A Team"];
+		var number = 0;
+
+		document.addEventListener("click", function () {
+			console.log("hey Elize!");
+			song.innerText = array[Math.round(Math.random()*6)];
+
+			if (song.innerText=="Perfect")  {
+				console.log("hi")
+			}
+
+			else if (song.innerText=="Photograph") {
+				song.play()
+
+			}
+
+			else if (song.innerText=="Shape of You") {
+				song.play()
+			}
+
+			else if (song.innerText=="Happier") {
+				song.play()
+			}
+
+			else if (song.innerText=="Galway Girl") {
+				song.play()
+			}
+
+			else if (song.innerText=="Castle on the Hill") {
+				song.play()
+			}
+
+			else if (song.innerText=="The A Team") {
+				song.play()
+			}
+
+
+
+
+
+		});
+
+		
+
+	</script>
+
+</body>
+
+</html>
